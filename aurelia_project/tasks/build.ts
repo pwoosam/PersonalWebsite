@@ -14,9 +14,9 @@ let build = gulp.series(
     transpile,
     processMarkup,
     copyFiles,
+    processCSS,
     prepareFontAwesome
   ),
-  processCSS,
   writeBundles
 );
 

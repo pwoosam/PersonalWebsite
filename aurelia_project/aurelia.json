@@ -79,6 +79,10 @@
     "baseDir": ".",
     "output": "scripts"
   },
+  "prepareFontAwesome": {
+    "sourceFontPath": "node_modules/@fortawesome/fontawesome-free/webfonts",
+    "output": "assets/fonts"
+  },
   "transpiler": {
     "id": "typescript",
     "displayName": "TypeScript",

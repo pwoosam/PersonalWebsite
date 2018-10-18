@@ -26,6 +26,7 @@ Thumbs.db
 
 # Dependencies
 node_modules
+/assets/fonts
 
 # Compiled files
 /scripts
