@@ -1,0 +1,73 @@
+<template>
+    <style>
+        #message {
+            height: 8rem;
+        }
+    </style>
+
+    <div class="row justify-content-center py-5">
+        <div class="col-8">
+
+            <p class="h3">
+                Contact Me
+            </p>
+
+            <div class="row">
+                <div class="col">
+                    <form class="card needs-validation" id="contactForm" novalidate>
+                        <div class="card-body">
+
+                            <div class="row">
+
+                                <div class="col-12 col-md">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name..."
+                                        required>
+                                    <div class="invalid-feedback">
+                                        Please provide a name
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-md-none">
+                                    <br>
+                                </div>
+
+                                <div class="col-12 col-md">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" placeholder="Enter your email..."
+                                        required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid email
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col">
+                                    <label for="message">Message</label>
+                                    <textarea class="form-control" id="message" placeholder="Leave a message..."
+                                        required></textarea>
+                                    <div class="invalid-feedback">
+                                        Please provide a message
+                                    </div>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col text-center">
+                                    <button class="btn btn-primary" type="button" click.delegate="sendMessage()">Send
+                                        Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

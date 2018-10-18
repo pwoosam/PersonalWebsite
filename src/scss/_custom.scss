@@ -1,0 +1,45 @@
+.active {
+    text-decoration-line: underline;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
+
+.bg-image {
+    z-index: -1;
+    min-width: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+nav {
+    &.navbar {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    .nav-item {
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: right;
+    }
+}
+
+$theme-colors: (
+  "primary": #0074d9
+);
+
+.clickable {
+    $color: map-get($map: $theme-colors, $key: "primary");
+    
+    cursor: pointer;
+
+    &:hover {
+        color: darken($color: $color, $amount: 10%)
+    }
+}
