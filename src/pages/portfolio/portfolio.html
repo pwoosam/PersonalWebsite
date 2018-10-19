@@ -1,4 +1,23 @@
 <template>
+    <style>
+        .badge-pill {
+            margin-right: 0.5rem;
+        }
+
+        .list-group-item {
+            border: none;
+        }
+
+        .item-selected {
+            position: absolute;
+            left: -2.5rem;
+        }
+
+        .project-image {
+            min-width: 10rem;
+        }
+    </style>
+
     <div class="row justify-content-center py-5">
         <div class="col-8">
 
@@ -11,11 +30,47 @@
             </div>
 
             <div class="row">
-                <div class="col-4">
-                    a
+                <div class="col-12 col-md-4">
+                    <ul class="list-group">
+                        <li class="list-group-item px-0" repeat.for="projectType of projectTypes">
+                            <i if.bind="selectedItem.title == projectType.title" class="far fa-2x fa-hand-point-right item-selected"></i>
+                            <div class="clickable" click.delegate="selectItem(projectType)">
+                                <span class="h5">${projectType.title}</span>
+                                <br>
+                                <span class="badge badge-pill ${skill.badgeColorClass ? skill.badgeColorClass : 'badge-info'}"
+                                    repeat.for="skill of projectType.skills">${skill.title}</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
+
+                <div class="col-12 d-md-none">
+                    <br>
+                </div>
+
                 <div class="col">
-                    b
+                    <div class="card">
+                        <div class="card-header">
+                            <span class="h3">${selectedItem.title}</span>
+                        </div>
+                        <div class="card-body">
+                            ${selectedItem.description}
+                            <div class="row">
+                                <div class="col py-3">
+                                    <img class="img-fluid project-image" src="../../../assets/images/placeholder.png" alt="placeholder image">
+                                </div>
+                                <div class="col py-3">
+                                    <img class="img-fluid project-image" src="../../../assets/images/placeholder.png" alt="placeholder image">
+                                </div>
+                                <div class="col py-3">
+                                    <img class="img-fluid project-image" src="../../../assets/images/placeholder.png" alt="placeholder image">
+                                </div>
+                                <div class="col py-3">
+                                    <img class="img-fluid project-image" src="../../../assets/images/placeholder.png" alt="placeholder image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
