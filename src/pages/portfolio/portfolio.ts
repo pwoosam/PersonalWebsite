@@ -8,10 +8,10 @@ export class Portfolio {
                 new ProjectSkill('C#', 'badge-primary'),
                 new ProjectSkill('Asp.Net', 'badge-primary'),
                 new ProjectSkill('.Net Core', 'badge-primary'),
-                new ProjectSkill('SASS', 'badge-danger'),
-                new ProjectSkill('Aurelia', 'badge-danger'),
-                new ProjectSkill('TypeScript', 'badge-danger'),
-                new ProjectSkill('HTML5', 'badge-danger'),
+                new ProjectSkill('SASS', 'badge-info'),
+                new ProjectSkill('Aurelia', 'badge-info'),
+                new ProjectSkill('TypeScript', 'badge-info'),
+                new ProjectSkill('HTML5', 'badge-info'),
             ], `A Full Stack developer is responsible for front and back-end web development.
             Usually, good full stack developers will understand severalhow to work with several
             languages and databases including PHP, HTML, CSS, JavaScript and everything in between.`),
@@ -36,7 +36,7 @@ export class Portfolio {
                 new ProjectSkill('Pandas', 'badge-primary'),
                 new ProjectSkill('Matplotlib', 'badge-primary'),
                 new ProjectSkill('R', 'badge-info'),
-                new ProjectSkill('MATLAB', 'badge-danger'),
+                new ProjectSkill('MATLAB', 'badge-info'),
             ], `Data science is an interdisciplinary field that uses scientific methods, processes, 
             algorithms and systems to extract knowledge and insights from data in various forms, both 
             structured and unstructured, similar to data mining.`),

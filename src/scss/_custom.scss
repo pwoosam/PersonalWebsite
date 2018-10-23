@@ -30,10 +30,6 @@ nav {
     }
 }
 
-$theme-colors: (
-  "primary": #0074d9
-);
-
 .clickable {
     $color: map-get($map: $theme-colors, $key: "primary");
     
@@ -42,4 +38,8 @@ $theme-colors: (
     &:hover {
         color: darken($color: $color, $amount: 10%)
     }
+}
+
+.badge-pill {
+    border-radius: 0.25rem;
 }
