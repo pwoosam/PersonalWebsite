@@ -44,7 +44,7 @@ export class Portfolio {
                 new ProjectSkill('Cura', 'badge-primary'),
                 new ProjectSkill('Fusion 360', 'badge-primary'),
                 new ProjectSkill('OpenSCAD', 'badge-info'),
-                new ProjectSkill('OctoPi', 'badge-secondary'),
+                new ProjectSkill('OctoPi', 'badge-info'),
             ], `3D modeling is the process of creating a 3D representation of any surface or object by 
             manipulating polygons, edges, and vertices in simulated 3D space. You've seen the results 
             of 3D modeling in movies, animations, and video games that are filled with fantastical and 
