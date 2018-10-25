@@ -25,7 +25,7 @@ export class Portfolio {
             computer hardware, peripheral devices, humans and combinations of these.`),
             new ProjectType('DevOps', [
                 new ProjectSkill('Docker', 'badge-primary'),
-                new ProjectSkill('TravisCI', 'badge-info'),
+                new ProjectSkill('Jenkins', 'badge-info'),
             ], `DevOps is a software development methodology that combines software development with 
             information technology operations. The goal of DevOps is to shorten the systems development 
             life cycle while also delivering features, fixes, and updates frequently in close alignment 
