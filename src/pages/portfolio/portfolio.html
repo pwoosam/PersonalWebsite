@@ -10,7 +10,8 @@
 
         .item-selected {
             position: absolute;
-            left: -2.5rem;
+            left: -2rem;
+            top: 0.5rem;
         }
 
         .project-image {
@@ -19,7 +20,7 @@
     </style>
 
     <div class="row justify-content-center py-5">
-        <div class="col-8">
+        <div class="col-10">
 
             <div class="row">
                 <div class="col">
@@ -33,7 +34,7 @@
                 <div class="col-12 col-md-4">
                     <ul class="list-group">
                         <li class="list-group-item px-0" repeat.for="projectType of projectTypes">
-                            <i if.bind="selectedItem.title == projectType.title" class="far fa-2x fa-hand-point-right item-selected"></i>
+                            <i if.bind="selectedItem.title == projectType.title" class="fa fa-2x fa-arrow-right item-selected"></i>
                             <div class="clickable" click.delegate="selectItem(projectType)">
                                 <span class="h5">${projectType.title}</span>
                                 <br>

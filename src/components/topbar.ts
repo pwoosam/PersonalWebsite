@@ -15,7 +15,7 @@ export class Topbar {
             let height = rect.bottom - rect.top;
 
             if (getComputedStyle(toggleBtn).display == 'none') {
-                height = 35 * parseInt(getComputedStyle(document.documentElement)['font-size']);
+                height = 400;
             }
 
             bgImage.height = height;

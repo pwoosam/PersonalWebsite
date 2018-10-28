@@ -1,4 +1,4 @@
-import {RouterConfiguration, Router} from 'aurelia-router';
+import { RouterConfiguration, Router } from 'aurelia-router';
 
 export class App {
   message = 'Hello World!';
@@ -23,13 +23,7 @@ export class App {
         name: 'portfolio',
         moduleId: 'pages/portfolio/portfolio',
         nav: true,
-        title: 'Portfolio' },
-      {
-        route: 'links',
-        name: 'links',
-        moduleId: 'pages/links/links',
-        nav: true,
-        title: 'Links'
+        title: 'Portfolio'
       },
       {
         route: 'contact',

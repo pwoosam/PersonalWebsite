@@ -1,9 +1,15 @@
 <template>
   <require from="app.css"></require>
   <require from="components/topbar"></require>
-  <topbar router.to-view="router"></topbar>
+  <require from="components/bottombar"></require>
 
-  <div class="container-fluid">
-    <router-view></router-view>
+  <div id="content">
+    <topbar router.to-view="router"></topbar>
+  
+    <div class="container-fluid">
+      <router-view></router-view>
+    </div>
   </div>
+  
+  <bottombar></bottombar>
 </template>
