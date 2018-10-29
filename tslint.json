@@ -1,5 +1,9 @@
 {
   "rules": {
-    "no-empty": true
+    "no-empty": true,
+    "semicolon": true,
+    "align": true,
+    "no-trailing-whitespace": true,
+    "trailing-comma": false
   }
 }

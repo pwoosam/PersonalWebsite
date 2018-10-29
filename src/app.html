@@ -3,13 +3,11 @@
   <require from="components/topbar"></require>
   <require from="components/bottombar"></require>
 
-  <div id="content">
-    <topbar router.to-view="router"></topbar>
-  
-    <div class="container-fluid">
-      <router-view></router-view>
-    </div>
+  <topbar router.to-view="router"></topbar>
+
+  <div class="container-fluid">
+    <router-view></router-view>
   </div>
-  
+
   <bottombar></bottombar>
 </template>
