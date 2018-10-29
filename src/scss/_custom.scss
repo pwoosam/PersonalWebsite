@@ -30,12 +30,10 @@ nav {
 }
 
 .clickable {
-    $color: map-get($map: $theme-colors, $key: "primary");
-    
-    cursor: pointer;
+    color: black;
 
     &:hover {
-        color: darken($color: $color, $amount: 10%)
+        color: darken(map-get($map: $theme-colors, $key: "primary"), 10%)
     }
 }
 
