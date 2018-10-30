@@ -31,6 +31,7 @@ nav {
 
 .clickable {
     color: black;
+    cursor: pointer;
 
     &:hover {
         color: darken(map-get($map: $theme-colors, $key: "primary"), 10%)
