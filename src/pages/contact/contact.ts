@@ -22,7 +22,7 @@ export class Examples {
 
     async sendMessage() {
         if (this.contactForm.checkValidity()) {
-            const response = await this._httpClient
+            await this._httpClient
                 .createRequest("https://pwsbe.patrickwoosam.com/email/send")
                 .asPost()
                 .withContent({
