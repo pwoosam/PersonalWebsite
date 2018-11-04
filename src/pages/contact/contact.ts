@@ -1,8 +1,17 @@
+import { autoinject } from 'aurelia-framework';
+import { HttpClient } from 'aurelia-http-client';
+
+@autoinject()
 export class Examples {
     contactForm: HTMLFormElement;
     name: HTMLInputElement;
     email: HTMLInputElement;
     message: HTMLTextAreaElement;
+    private _httpClient: HttpClient;
+
+    constructor(httpClient: HttpClient) {
+        this._httpClient = httpClient;
+    }
 
     attached() {
         this.contactForm = <HTMLFormElement>document.getElementById('contactForm');
@@ -11,16 +20,17 @@ export class Examples {
         this.message = <HTMLTextAreaElement>document.getElementById('message');
     }
 
-    sendMessage() {
+    async sendMessage() {
         if (this.contactForm.checkValidity()) {
-            console.log('sent', [
-                this.name.value,
-                this.email.value,
-                this.message.value
-            ]);
-        }
-        else{
-            console.log('not sent');
+            const response = await this._httpClient
+                .createRequest("https://pwsbe.patrickwoosam.com/email/send")
+                .asPost()
+                .withContent({
+                    name: this.name.value,
+                    fromEmail: this.email.value,
+                    body: this.message.value
+                })
+                .send();
         }
 
         this.contactForm.classList.add('was-validated');
