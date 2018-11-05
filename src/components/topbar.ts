@@ -11,9 +11,9 @@ export class Topbar {
         bgImage.id = 'bgImage';
         bgImage.alt = 'navbar background image';
 
-        let imageWidth = window.outerWidth;
-        if (window.outerHeight > imageWidth) {
-            imageWidth = window.outerHeight;
+        let imageWidth = window.innerWidth;
+        if (window.innerHeight > imageWidth) {
+            imageWidth = window.innerHeight;
         }
         bgImage.src = `https://pwsbe.patrickwoosam.com/bgimage/${imageWidth}`;
 
