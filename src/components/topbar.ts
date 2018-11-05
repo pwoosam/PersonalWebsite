@@ -6,7 +6,18 @@ export class Topbar {
     @bindable router: Router;
 
     attached() {
-        const bgImage = <HTMLImageElement>document.getElementById('bgImage');
+        const bgImage = <HTMLImageElement>document.createElement('img');
+        bgImage.style.visibility = 'hidden';
+        bgImage.className = 'bg-image';
+        bgImage.id = 'bgImage';
+        bgImage.alt = 'navbar background image';
+        bgImage.src = `https://pwsbe.patrickwoosam.com/bgimage/${window.innerWidth}`;
+        const bgImageContainer = <HTMLDivElement>document.getElementById('bgImageContainer');
+        bgImageContainer.appendChild(bgImage);
+        bgImage.onload = () => {
+            bgImage.style.visibility = 'visible';
+        };
+
         const topbar = document.getElementById('topbar');
         const toggleBtn = document.getElementById('toggleBtn');
 
